@@ -1,0 +1,131 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+    th{ 
+        color:#fff;
+            }
+            .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: rgb(7, 34, 85);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #0e2e74;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+
+
+<table class="table table-striped">
+    <tr  class="bg-info">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = [ 
+    {
+      "id": "61",
+      "name": "Abagail MacGyver",
+      "email": "Jevon.Koch@hotmail.com"
+    },
+    {
+      "id": "62",
+      "name": "Ludwig Prohaska",
+      "email": "Eldon_DuBuque37@yahoo.com"
+    },
+    {
+      "id": "63",
+      "name": "Berenice Hane",
+      "email": "Lonnie3@gmail.com"
+    },
+    {
+      "id": "64",
+      "name": "Abel Durgan",
+      "email": "Marlee.Weimann42@gmail.com"
+    },
+    {
+      "id": "65",
+      "name": "Tate Kuhlman",
+      "email": "Hope31@yahoo.com"
+    },
+    {
+      "id": "66",
+      "name": "Mrs. Hermina Daniel",
+      "email": "Murphy59@yahoo.com"
+    },
+    {
+      "id": "67",
+      "name": "Marcelino Nienow",
+      "email": "Estefania_Dibbert97@hotmail.com"
+    },
+    {
+      "id": "68",
+      "name": "Raphaelle Connelly",
+      "email": "Josie.Legros70@yahoo.com"
+    },
+    {
+      "id": "69",
+      "name": "Mina Heaney",
+      "email": "Pete.Hermann79@hotmail.com"
+    },
+    {
+      "id": "70",
+      "name": "Jaida Torp",
+      "email": "Jonatan82@yahoo.com"
+    }
+
+	]
+	
+	buildTable(myArray)
+
+
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].id}</td>
+							<td>${data[i].name}</td>
+							<td>${data[i].email}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
+<body>
+    <div class="pagination">
+        <a href="C:\Users\ELCOT\Desktop\pagination\5.html">&laquo;</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\index.html">1</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\1.html">2</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\2.html">3</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\3.html">4</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\4.html">5</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\5.html">6</a>
+        <a class="active" href="C:\Users\ELCOT\Desktop\pagination\6.html">7</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\7.html">8</a>
+        <a href=C:\Users\ELCOT\Desktop\pagination\8.html>9</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\9.html">10</a>
+        <a href="C:\Users\ELCOT\Desktop\pagination\7.html">&raquo;</a>
+      </div>
+</body>
